@@ -1,5 +1,7 @@
 package com.example.rapideats.Activity;
 
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 
@@ -26,22 +28,23 @@ public class IntroActivity extends BaseActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
         setVariable();
+        getWindow().setStatusBarColor(Color.parseColor("#FFE485"));
     }
 
     private void setVariable() {
-        binding.loginBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
+        binding.loginBtn.setOnClickListener(v -> {
+            if(mAuth.getCurrentUser()!=null)
+            {
+                startActivity(new Intent(IntroActivity.this, MainActivity.class));
+            }else
+            {
+                startActivity(new Intent(IntroActivity.this, LoginActivity.class));
             }
         });
 
-        binding.signupBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-            }
-        });
+        binding.signupBtn.setOnClickListener(v -> startActivity(new Intent(IntroActivity.this, SignupActivity.class)));
     }
 }
