@@ -1,11 +1,12 @@
 package com.example.rapideats.Domain;
 
 public class Category {
-    private  int id;
+    private int id;
     private String ImagePath;
     private String Name;
 
-    public Category() {
+    public Category()
+    {
 
     }
 

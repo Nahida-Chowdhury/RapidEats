@@ -1,6 +1,10 @@
 package com.example.rapideats.Domain;
 
-public class Foods {
+import androidx.annotation.NonNull;
+
+import java.io.Serializable;
+
+public class Foods implements Serializable {
     private int CategoryId;
     private String Description;
     private boolean BestFood;
@@ -13,10 +17,7 @@ public class Foods {
     private int TimeId;
     private int TimeValue;
     private String Title;
-
-    public Foods() {
-
-    }
+    private int numberInCart;
 
     public int getCategoryId() {
         return CategoryId;
@@ -114,20 +115,20 @@ public class Foods {
         Title = title;
     }
 
-    public int getNumberCart() {
-        return numberCart;
+    public int getNumberInCart() {
+        return numberInCart;
     }
 
-    public void setNumberCart(int numberCart) {
-        this.numberCart = numberCart;
+    public void setNumberInCart(int numberInCart) {
+        this.numberInCart = numberInCart;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return Title;
     }
 
-
-
-    private int numberCart;
+    public Foods() {
+    }
 }
