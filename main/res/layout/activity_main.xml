@@ -46,7 +46,9 @@
                     android:id="@+id/logoutBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+
                     android:importantForAccessibility="no"
+
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -67,7 +69,9 @@
                     android:layout_height="50dp"
                     android:layout_marginEnd="6dp"
                     android:background="@drawable/grey_background"
+
                     android:importantForAccessibility="no"
+
                     android:padding="12dp"
                     tools:srcCompat="@drawable/settings" />
 
@@ -92,8 +96,10 @@
                         android:textColor="@color/blue_grey"
                         android:textColorHint="@color/blue_grey"
                         android:textSize="16sp"
+
                         tools:padding="8dp"
                         tools:ignore="NestedWeights" />
+
 
                     <ImageView
                         android:id="@+id/searchBtn"
@@ -113,6 +119,7 @@
                     android:layout_marginStart="6dp"
                     android:background="@color/grey"
                     android:importantForAccessibility="no"
+
                     tools:padding="12dp"
                     tools:srcCompat="@drawable/basket" />
             </LinearLayout>
@@ -128,8 +135,10 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+
                     android:layout_marginEnd="8dp"
                     android:layout_weight="0.3333"
+
                     android:background="@drawable/grey_background"
                     android:orientation="horizontal">
 
@@ -167,6 +176,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="8dp"
+
                         android:background="@drawable/time"
                         android:importantForAccessibility="no" />
 
@@ -205,6 +215,7 @@
                         android:layout_weight="1"
                         android:background="@null"
                         tools:ignore="NestedWeights" />
+
                 </LinearLayout>
             </LinearLayout>
 
@@ -219,6 +230,7 @@
                 <TextView
                     android:id="@+id/textView9"
                     android:layout_width="0dp"
+
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Today's best Foods"
@@ -241,6 +253,7 @@
 
                 <ProgressBar
                     android:id="@+id/progressBarBestFood"
+
                     style="?android:attr/progressBarStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -253,9 +266,11 @@
                     android:id="@+id/bestFoodView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+
                     android:clipToPadding="false"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp"
+
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"

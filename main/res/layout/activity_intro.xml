@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".IntroActivity">
+    tools:context=".Activity.IntroActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -15,8 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/orange_background"
-        tools:src="@tools:sample/avatars" />
+        app:srcCompat="@drawable/orange_background" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -26,8 +25,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/intro_pic"
-        tools:src="@tools:sample/avatars" />
+        app:srcCompat="@drawable/intro_pic" />
 
     <ImageView
         android:id="@+id/imageView3"

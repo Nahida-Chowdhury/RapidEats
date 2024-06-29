@@ -74,15 +74,16 @@ public class MainActivity extends BaseActivity {
                 intent.putExtra("isSearch",true);
                 startActivity(intent);
             }
-
-
         });
 
+        binding.cartBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, CartActivity.class)));
     }
 
     private void intCategory() {
         DatabaseReference myRef = database.getReference("Category");
+
         binding.progressBarBestFood.setVisibility(View.VISIBLE);
+      
         ArrayList<Category> list = new ArrayList<>();
         myRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -96,7 +97,9 @@ public class MainActivity extends BaseActivity {
                         RecyclerView.Adapter<CategoryAdapter.viewholder> adapter = new CategoryAdapter(list);
                         binding.bestFoodView.setAdapter(adapter);
                     }
+
                     binding.progressBarBestFood.setVisibility(View.GONE);
+
                 }
             }
 
@@ -181,7 +184,9 @@ public class MainActivity extends BaseActivity {
 
     private void initBestFood() {
         DatabaseReference myRef = database.getReference("Foods");
+      
         binding.progressBarBestFood.setVisibility(View.VISIBLE);
+
         ArrayList<Foods> list = new ArrayList<>();
         Query query = myRef.orderByChild("BestFood").equalTo(true);
         query.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -196,7 +201,9 @@ public class MainActivity extends BaseActivity {
                         RecyclerView.Adapter<BestFoodsAdapter.viewholder> adapter = new BestFoodsAdapter(list);
                         binding.bestFoodView.setAdapter(adapter);
                     }
+                  
                     binding.progressBarBestFood.setVisibility(View.GONE);
+
                 }
             }
 
