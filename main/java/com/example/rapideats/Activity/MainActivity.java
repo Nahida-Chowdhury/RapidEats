@@ -81,7 +81,9 @@ public class MainActivity extends BaseActivity {
 
     private void intCategory() {
         DatabaseReference myRef = database.getReference("Category");
-        binding.pogressBarBestFood.setVisibility(View.VISIBLE);
+
+        binding.progressBarBestFood.setVisibility(View.VISIBLE);
+      
         ArrayList<Category> list = new ArrayList<>();
         myRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -95,7 +97,9 @@ public class MainActivity extends BaseActivity {
                         RecyclerView.Adapter<CategoryAdapter.viewholder> adapter = new CategoryAdapter(list);
                         binding.bestFoodView.setAdapter(adapter);
                     }
-                    binding.pogressBarBestFood.setVisibility(View.GONE);
+
+                    binding.progressBarBestFood.setVisibility(View.GONE);
+
                 }
             }
 
@@ -180,7 +184,9 @@ public class MainActivity extends BaseActivity {
 
     private void initBestFood() {
         DatabaseReference myRef = database.getReference("Foods");
-        binding.pogressBarBestFood.setVisibility(View.VISIBLE);
+      
+        binding.progressBarBestFood.setVisibility(View.VISIBLE);
+
         ArrayList<Foods> list = new ArrayList<>();
         Query query = myRef.orderByChild("BestFood").equalTo(true);
         query.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -195,7 +201,9 @@ public class MainActivity extends BaseActivity {
                         RecyclerView.Adapter<BestFoodsAdapter.viewholder> adapter = new BestFoodsAdapter(list);
                         binding.bestFoodView.setAdapter(adapter);
                     }
-                    binding.pogressBarBestFood.setVisibility(View.GONE);
+                  
+                    binding.progressBarBestFood.setVisibility(View.GONE);
+
                 }
             }
 
