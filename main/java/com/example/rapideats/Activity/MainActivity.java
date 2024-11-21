@@ -57,7 +57,6 @@ public class MainActivity extends BaseActivity {
         intCategory();
         setVariable();
 
-
     }
 
     private void setVariable() {
